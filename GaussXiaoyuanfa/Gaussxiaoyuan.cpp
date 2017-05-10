@@ -1,11 +1,15 @@
 #include<iostream>
+#include<fstream>
 using namespace std;
 
 int main() {
     int R,C; // 行列
 	float **A; // 增广矩阵
 	float X[C-1]; // 解
-    cout<<"请输入行数和列数(eg:3 4)"<<endl;
+	int a1=0;
+	float a;
+    /*
+	cout<<"请输入行数和列数(eg:3 4)"<<endl;
 	cin>>R; cin>>C;
 	A=new float*[R];
 	for(int i=0;i<R;i++) {
@@ -22,6 +26,18 @@ int main() {
         }
     }
 	cout<<endl;
+	*/
+	ifstream fileIn("Gauss_data.txt");
+	fileIn>>R>>C;
+	A=new float*[R];
+	for(int i=0;i<R;i++) {
+		A[i]=new float[C];
+	}
+	for(int i=0;i<R;i++) {
+		for(int j=0;j<C;j++) {
+			fileIn>>A[i][j];
+		}
+	}
 	cout<<"-----消元:-----"<<endl;
 	for(int k=0;k<C-2;k++) {
 		for(int r=k+1;r<R;r++) {
