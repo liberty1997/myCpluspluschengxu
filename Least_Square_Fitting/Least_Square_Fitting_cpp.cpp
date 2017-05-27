@@ -42,10 +42,6 @@ int main() {
 	for(int i=0;i<N+1;i++) {
 		for(int j=0;j<A.size();j++) {
 			L[i][N+1]+=(pow(A[j],i)*B[j]);
-			/* 这里如果先建个t,先把求和结果给了t,
-			再把t赋给L[i][N+1],就会core dumped
-			,so weird!!!
-			*/
 		}
 	}
 	for(int i=0;i<N+1;i++) {
