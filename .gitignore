@@ -1,3 +1,4 @@
 *.a
 *.o
 *.class
+*_exec
