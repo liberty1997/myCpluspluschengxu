@@ -1,5 +1,6 @@
 // 本程序实现了点的名称和数字0 1 2 3 ...的自动映射
 // 即输入点时可以输ABCD...(以前是输0123...)且顺序随意
+// map的find方法的参数只能是map的第一个参数(iter->first)
 #include<iostream>
 #include<map>
 #include<vector>
