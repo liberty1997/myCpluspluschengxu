@@ -5,7 +5,6 @@
 #include<map>
 #include<vector>
 #include<fstream>
-using namespace std;
 const int INF=999;
 const int MAX_VERTEX_NUM=20;
 // 邻接矩阵
@@ -20,6 +19,12 @@ typedef struct {
 }MGraph;
 
 int main() {
+	using std::cout;
+	using std::endl;
+	using std::pair;
+	using std::map;
+	using std::vector;
+	using std::ifstream;
 	ifstream fileIn("Roads_net1.txt");
 	MGraph G;
 	int Cost=0; // 最小生成树的代价

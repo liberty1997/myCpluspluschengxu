@@ -3,8 +3,14 @@
 #include<vector>
 #include<fstream>
 #include<map>
-using namespace std;
 int main () {
+	using std::cout;
+	using std::vector;
+	using std::string;
+	using std::ifstream;
+	using std::pair;
+	using std::map;
+	using std::endl;
 	//ifstream fileIn("tyut.txt");
 	ifstream fileIn("python_tutorial.txt");
 	vector<char> vc;

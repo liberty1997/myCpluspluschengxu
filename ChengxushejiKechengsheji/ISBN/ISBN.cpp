@@ -1,8 +1,12 @@
 #include<iostream>
 #include<vector>
 #include<fstream>
-using namespace std;
 int main() {
+	using std::cout;
+	using std::endl;
+	using std::string;
+	using std::ifstream;
+	using std::vector;
 	ifstream fileIn("ISBN_data.txt");
 	vector<string> vecs;
 	string s;

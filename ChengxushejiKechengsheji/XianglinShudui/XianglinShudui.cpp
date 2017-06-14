@@ -1,8 +1,11 @@
 #include<iostream>
 #include<fstream>
 #include<algorithm>
-using namespace std;
 int main() {
+	using std::cout;
+	using std::endl;
+	using std::ifstream;
+	using std::sort;
 	ifstream fileIn("XianglinShu_data1.txt");
 	int N;
 	int A[N];

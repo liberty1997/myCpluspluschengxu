@@ -2,9 +2,12 @@
 #include<vector>
 #include<iomanip>
 #include<fstream>
-using namespace std;
-const int INF=999;
 int main() {
+	using std::cout;
+	using std::endl;
+	using std::vector;
+	using std::ifstream;
+	const int INF=999;
 	ifstream fileIn("songhuo_data.txt");
 	int N,M,a,b,k; // a b 辅助输入
 	fileIn>>N>>M;
