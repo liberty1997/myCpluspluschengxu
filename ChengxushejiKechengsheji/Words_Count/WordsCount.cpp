@@ -38,6 +38,7 @@ int main () {
 			vc.clear();
 		}
 	}
+	fileIn.close();
 	for(auto i=wmap.begin();i!=wmap.end();i++)
 		cout<<i->first<<' '<<i->second<<endl;
 	cout<<"Sum:"<<vstr.size()<<endl;

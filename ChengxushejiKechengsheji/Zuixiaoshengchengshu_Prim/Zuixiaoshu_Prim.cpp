@@ -51,6 +51,7 @@ int main() {
 		G.arcs[k1_iter->second][k2_iter->second].weight=c;
 		G.arcs[k2_iter->second][k1_iter->second].weight=c;
 	}
+	fileIn.close();
 	for(auto i=Gmap.begin();i!=Gmap.end();i++) {
 		Vmark[i->second]=0;
 	}

@@ -26,6 +26,7 @@ int main() {
 		Matrix[a-1][b-1]=1; // 点的编号是从一开始的
 		Matrix[b-1][a-1]=1;	// 所以直接用ab作下标减个1
 	}
+	fileIn.close();
 	k=0; // 从点1开始
 	dir.push_back(k);
 	// 每走过一条边,就把矩阵中对应的值+1
