@@ -20,6 +20,7 @@ int main() {
 	for(int i=0;i<N+1;i++) {
 		L[i].resize(N+2);
 	}
+	fileIn.close();
 	// 以上为读取文本文件中的信息
 	// 写入矩阵 求中间的矩阵
 	for(int i=0;i<N+1;i++) {
@@ -71,9 +72,13 @@ int main() {
 	}
 	cout<<"方程:\ny="<<a[a.size()-1];
 	int t=1;
+	// 2017/06/15 更新了下面格式化输出的语句
+	// 更多用法参见C++ Primer Plus
 	for(int i=a.size()-2;i>=0;i--) {
-		cout<<setiosflags(ios::showpos)<<a[i]<<"x^";
-		cout<<resetiosflags(ios::showpos)<<t;
+		cout.setf(ios_base::showpos);
+		cout<<a[i]<<"x^";
+		cout.unsetf(ios_base::showpos);
+		cout<<t;
 		t++;
 	} 
 	cout<<endl;
