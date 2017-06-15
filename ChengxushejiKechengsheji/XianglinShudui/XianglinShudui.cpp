@@ -2,11 +2,7 @@
 #include<fstream>
 #include<algorithm>
 int main() {
-	using std::cout;
-	using std::endl;
-	using std::ifstream;
-	using std::sort;
-	ifstream fileIn("XianglinShu_data1.txt");
+	std::ifstream fileIn("XianglinShu_data1.txt");
 	int N;
 	int A[N];
 	int count=0;
@@ -15,12 +11,12 @@ int main() {
 		fileIn>>A[i];
 	}
 	fileIn.close();
-	sort(A,A+N);
+	std::sort(A,A+N);
 	for(int i=1;i<N;i++) {
 		if(A[i]-A[i-1]==1) {
 			count++;
 		}
 	}
-	cout<<count<<endl;
+	std::cout<<count<<std::endl;
 	return 0;
 }

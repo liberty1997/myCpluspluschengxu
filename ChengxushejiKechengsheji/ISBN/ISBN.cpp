@@ -4,12 +4,9 @@
 int main() {
 	using std::cout;
 	using std::endl;
-	using std::string;
-	using std::ifstream;
-	using std::vector;
-	ifstream fileIn("ISBN_data.txt");
-	vector<string> vecs;
-	string s;
+	std::ifstream fileIn("ISBN_data.txt");
+	std::vector<std::string> vecs;
+	std::string s;
 	while(fileIn>>s) {
 		vecs.push_back(s);
 	}

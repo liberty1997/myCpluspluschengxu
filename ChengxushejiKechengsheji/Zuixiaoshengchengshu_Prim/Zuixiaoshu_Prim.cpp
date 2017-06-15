@@ -19,23 +19,17 @@ typedef struct {
 }MGraph;
 
 int main() {
-	using std::cout;
-	using std::endl;
-	using std::pair;
-	using std::map;
-	using std::vector;
-	using std::ifstream;
-	ifstream fileIn("Roads_net1.txt");
+	std::ifstream fileIn("Roads_net1.txt");
 	MGraph G;
 	int Cost=0; // 最小生成树的代价
-	map<char,int> Gmap;
-	map<int,int> Vmark; // 标记为0表示没加入生成树
+	std::map<char,int> Gmap;
+	std::map<int,int> Vmark; // 标记为0表示没加入生成树
 	fileIn>>G.vexnum>>G.arcnum;
 	for(int i=0;i<G.vexnum;i++) {
 		char c;
 		fileIn>>c;
 		G.vexs[i]=c;
-		Gmap.insert(pair<char,int>(c,i));
+		Gmap.insert(std::pair<char,int>(c,i));
 	}
 	for(auto i=Gmap.begin();i!=Gmap.end();i++) {
 		for(auto j=Gmap.begin();j!=Gmap.end();j++) {
@@ -56,7 +50,7 @@ int main() {
 		Vmark[i->second]=0;
 	}
 	// Prim
-	vector<char> Zuivex;
+	std::vector<char> Zuivex;
 	auto k_iter=Gmap.find('A');
 	int k=k_iter->second;
 	Vmark[k]=1;
@@ -77,10 +71,10 @@ int main() {
 		Cost+=min;
 		auto min_iter=Gmap.find(mincol);
 		Vmark[min_iter->second]=1;
-		cout<<"("<<Zuivex.back()<<","<<min_iter->first<<")"<<endl;
+		std::cout<<"("<<Zuivex.back()<<","<<min_iter->first<<")"<<'\n';
 		Zuivex.push_back(min_iter->first);
 	}
-	if(Zuivex.size()!=G.vexnum) cout<<"非连通图!"<<endl;
-	cout<<"min_Cost: "<<Cost<<endl;
+	if(Zuivex.size()!=G.vexnum) std::cout<<"非连通图!"<<'\n';
+	std::cout<<"min_Cost: "<<Cost<<'\n';
 	return 0;
 }

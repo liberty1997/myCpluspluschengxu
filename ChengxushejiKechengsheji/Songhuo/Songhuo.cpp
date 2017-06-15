@@ -5,14 +5,12 @@
 int main() {
 	using std::cout;
 	using std::endl;
-	using std::vector;
-	using std::ifstream;
 	const int INF=999;
-	ifstream fileIn("songhuo_data.txt");
+	std::ifstream fileIn("songhuo_data.txt");
 	int N,M,a,b,k; // a b 辅助输入
 	fileIn>>N>>M;
-	vector<vector<int> > Matrix(N);
-	vector<int> dir;
+	std::vector<std::vector<int> > Matrix(N);
+	std::vector<int> dir;
 	for(int i=0;i<N;i++) {
 		Matrix[i].resize(N);
 	}
